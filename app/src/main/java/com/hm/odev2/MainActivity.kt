@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         val clearButton: Button = findViewById(R.id.clearButton)
         val diceImg1 : ImageView = findViewById(R.id.diceImg)
         val diceImg2 : ImageView = findViewById(R.id.diceImg2)
+        val text : TextView = findViewById(R.id.textView)
+
         diceImg1.setImageResource(R.drawable.empty_dice)
         diceImg2.setImageResource(R.drawable.empty_dice)
 
@@ -52,6 +55,8 @@ class MainActivity : AppCompatActivity() {
                 6 -> diceImg2.setImageResource(zar6.img)
             }
 
+            text.setText((rand1+rand2).toString())
+
 
         }
 
@@ -62,6 +67,7 @@ class MainActivity : AppCompatActivity() {
 
             diceImg1.setImageResource(R.drawable.empty_dice)
             diceImg2.setImageResource(R.drawable.empty_dice)
+            text.setText("")
         }
 
 
